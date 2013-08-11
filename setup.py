@@ -51,7 +51,7 @@ setup(
           'Operating System :: OS Independent',
           'Operating System :: POSIX :: Linux',
           'Operating System :: MacOS :: MacOS X',
-          'Programming Language :: Python'
+          'Programming Language :: Python',
           'Topic :: Communications',
           'Topic :: Software Development :: Libraries :: Python Modules',
           'Topic :: Software Development :: Object Brokering',
