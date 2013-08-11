@@ -1,7 +1,7 @@
 Django-like Redis pagination for Python
 ---------------------------------------
 
-Except for the __init__ method, this is 100% API compatible with Django's own pagination
+Except for the \__init\__ method, this is 100% API compatible with Django's own pagination
 but works with Redis instead of SQL databases.
 
 Supports lists, sorted sets or ranges of sorted sets between min/max scores.
