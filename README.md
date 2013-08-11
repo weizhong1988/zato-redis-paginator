@@ -78,7 +78,7 @@ Working with sorted sets and min/max scores
 ===========================================
 
 Establishes a connection, creates a sorted set and splits it into pages while
-including only these member that are between min and max scores.
+including only these members that are between min and max scores.
 
 ```python
     from uuid import uuid4
