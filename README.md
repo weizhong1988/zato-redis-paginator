@@ -47,7 +47,7 @@ Establishes a connection, creates a list and splits it into pages.
 Working with sorted sets
 ========================
 
-Establishes a connection, creates a list and splits it into pages.
+Establishes a connection, creates a sorted set and splits it into pages.
 
 ```python
     from uuid import uuid4
@@ -73,6 +73,41 @@ Establishes a connection, creates a list and splits it into pages.
         
     conn.delete(key)
 ```
+
+Working with sorted sets and min/max scores
+===========================================
+
+Establishes a connection, creates a sorted set and splits it into pages.
+
+```python
+    from uuid import uuid4
+    from redis import StrictRedis
+    from zato.redis_paginator import ZSetPaginator
+    
+    conn = StrictRedis()
+    key = 'paginator:{}'.format(uuid4().hex)
+    
+    # 97-114 is 'a' to 'r' in ASCII
+    for x in range(1, 18):
+        conn.zadd(key, x, chr(96 + x))
+        
+    p = ZSetPaginator(conn, key, 2, score_min=5, score_max=13)
+    
+    print(p.count)      # 9
+    print(p.num_pages)  # 5
+    print(p.page_range) # [1, 2, 3, 4, 5]
+    
+    page = p.page(3)
+    print(page)             # <Page 3 of 5>
+    print(page.object_list) # ['i', 'j']
+        
+    conn.delete(key)
+```
+
+Changelog
+=========
+
+* Aug 11, 2013 - Initial 1.0 release
 
 License
 =======
