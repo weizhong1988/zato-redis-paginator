@@ -3,6 +3,7 @@ src/.installed.cfg
 src/bin/*
 src/build/*
 src/*/dist
+.coverage
 *.pyc
 *.pyo
 *.egg-info*

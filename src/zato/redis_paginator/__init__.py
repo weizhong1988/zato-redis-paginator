@@ -112,36 +112,3 @@ class ZSetPaginator(RedisPaginator):
     def __init__(self, *args, **kwargs):
         kwargs['source_type'] = 'zset'
         super(ZSetPaginator, self).__init__(*args, **kwargs)
-        
-# ##############################################################################    
-        
-if __name__ == '__main__':
-    
-    # Redis connection
-    from redis import StrictRedis
-    conn = StrictRedis()
-    
-    """
-    key = 'mylist'
-    p = ListPaginator(conn, key, 5)
-    print(p.count)
-    print(p.num_pages)
-    print(p.page_range)
-    
-    page1 = p.page(3)
-    print(page1)
-    print(page1.object_list)
-    """
-
-    
-    #key = 'zato:delivery:in-doubt:list:anon-outconn-wmq-My MQ app2-2-1-3-26000-212000-248000'
-    key = 'myset1'
-    
-    p = ZSetPaginator(conn, key, 5, score_min=1, score_max=3)
-    print(p.count)
-    print(p.num_pages)
-    print(p.page_range)
-    
-    page1 = p.page(1)
-    print(page1)
-    print(page1.object_list)

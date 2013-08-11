@@ -6,6 +6,12 @@ Copyright (C) 2013 Dariusz Suchojad <dsuch at zato.io>
 Licensed under the BSD 3-clause license, see LICENSE.txt for terms and conditions.
 """
 
+#
+# * Django-like Redis pagination - a drop-in replacement except for the __init__ method.
+#
+# * Originally part of Zato - ESB, SOA and cloud integrations in Python https://zato.io
+#
+
 # flake8: noqa
 
 from setuptools import setup, find_packages
