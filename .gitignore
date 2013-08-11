@@ -1,0 +1,10 @@
+src/.coverage
+src/.installed.cfg
+src/bin/*
+src/build/*
+src/*/dist
+*.pyc
+*.pyo
+*.egg-info*
+*.*~
+~
