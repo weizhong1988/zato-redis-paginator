@@ -117,4 +117,4 @@ BSD 3-clause license, see LICENSE.txt for terms and conditions.
 More information
 ================
 
-Originally part of Zato - ESB, SOA and cloud integrations in Python - https://zato.io
+Originally part of Zato - ESB, SOA and cloud integrations in Python - https://zato.io/docs/
