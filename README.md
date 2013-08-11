@@ -10,7 +10,7 @@ Supported data types:
 - sorted sets
 - ranges of sorted sets between min/max scores
 
-The first two don't do it but the last one needs to fetch an entire results between
+The first two don't do it but the last one needs to fetch an entire result between
 min and max score to calculate the pages. This is because ZRANGEBYSCORE doesn't
 have any means to obtain the number of results that would've been returned without
 actually returning them. 
