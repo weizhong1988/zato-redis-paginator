@@ -26,7 +26,7 @@ setup(
 
       author = 'Zato Developers',
       author_email = 'info@zato.io',
-      url = 'https://zato.io',
+      url = 'https://github.com/zatosource/zato-redis-paginator',
       license = 'BSD 3-Clause License',
       platforms = 'OS Independent',
       description = description,
