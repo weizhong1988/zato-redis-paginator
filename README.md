@@ -11,7 +11,7 @@ Supported data types:
 - ranges of sorted sets between min/max scores
 
 The first two don't do it but the last one needs to fetch an entire results between
-min and max score to calculate the pages. This is because ZREVRANGEBYSCORE doesn't
+min and max score to calculate the pages. This is because ZRANGEBYSCORE doesn't
 have any means to obtain the number of results that would've been returned without
 actually returning them. 
 
