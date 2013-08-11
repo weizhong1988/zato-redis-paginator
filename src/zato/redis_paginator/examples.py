@@ -90,5 +90,3 @@ def zset_score_min_max_example():
     print(page.object_list) # ['i', 'j']
         
     conn.delete(key)
-    
-zset_score_min_max_example()
